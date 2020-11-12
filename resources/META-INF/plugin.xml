@@ -1,0 +1,65 @@
+<idea-plugin>
+    <id>com.your.company.unique.plugin.id</id>
+    <name>dbplugin</name>
+    <version>1.0</version>
+    <vendor email="1163096519@qq.com" url="http://www.baidu.com">deepblue</vendor>
+
+    <description>"dsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsa"</description>
+
+    <change-notes>"dsadsadsadsadsadsadsadsadsadsadsadsadsadsadsadsa"</change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+                <action id="Andplus_findvaction" class="com.mdx.andplus.Action.FindVAction" text="FindView">
+                    <add-to-group group-id="GenerateGroup" anchor="first"/>
+                </action>
+
+
+        <action id="Andplus_createClass" class="com.mdx.andplus.Action.CreateClass" text="CreateClass"
+                description="自动创建类"
+                icon="/butterknife-zelezny.png">
+            <add-to-group group-id="NewGroup" anchor="first"/>
+        </action>
+
+
+        <action id="android-selector-chapek" class="com.mdx.andplus.Action.DrawbleSelectorM"
+                text="Create Selectors And Move"
+                icon="/butterknife-zelezny.png"
+                description="创建Selectors并且将drawable下图片移动到mipmap中">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="after"
+                          relative-to-action="ProjectViewPopupMenuRefactoringGroup"/>
+        </action>
+        <action id="android-selector-chapek_n" class="com.mdx.andplus.Action.DrawbleSelector"
+                text="Create Selectors"
+                icon="/butterknife-zelezny.png"
+                description="创建Selectors">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="after"
+                          relative-to-action="ProjectViewPopupMenuRefactoringGroup"/>
+        </action>
+
+        <action id="android-fit-screen" class="com.mdx.andplus.Action.FitScreen"
+                text="Fit Screen"
+                icon="/butterknife-zelezny.png"
+                description="对应用进行屏幕适配调整">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="after"
+                          relative-to-action="ProjectViewPopupMenuRefactoringGroup"/>
+        </action>
+        <action id="android-fit-string" class="com.mdx.andplus.Action.FitString"
+                text="Fit String"
+                icon="/butterknife-zelezny.png"
+                description="批量国际化String值">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="after"
+                          relative-to-action="ProjectViewPopupMenuRefactoringGroup"/>
+        </action>
+    </actions>
+
+</idea-plugin>
